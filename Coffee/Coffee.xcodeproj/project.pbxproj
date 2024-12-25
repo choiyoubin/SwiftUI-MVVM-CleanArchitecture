@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		02AE950D2D1C6BF20040651E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 02AE950C2D1C6BEB0040651E /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		02AE94D62D19CAF20040651E /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02AE950C2D1C6BEB0040651E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		02AE94CD2D19CAF20040651E = {
 			isa = PBXGroup;
 			children = (
+				02AE950C2D1C6BEB0040651E /* .gitignore */,
 				02AE94D82D19CAF20040651E /* Coffee */,
 				02AE94D72D19CAF20040651E /* Products */,
 			);
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02AE950D2D1C6BF20040651E /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
