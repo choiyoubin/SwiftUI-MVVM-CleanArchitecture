@@ -11,7 +11,11 @@ import SwiftUI
 struct CoffeeApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            let repository = DefaultCoffeeRepository()
+            let useCase = DefaultFetchSortedCoffeeUseCase(repository: repository)
+            let viewModel = MainViewModel(fetchSortedCoffeeUseCase: useCase)
+            
+            MainView(viewModel: viewModel)
         }
     }
 }

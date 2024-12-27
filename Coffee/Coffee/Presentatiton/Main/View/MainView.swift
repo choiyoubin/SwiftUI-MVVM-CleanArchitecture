@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+    @StateObject private var viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
-}
-
-#Preview {
-    MainView()
+    
+    var body: some View {
+        List(viewModel.coffeeList, id: \.id) { coffee in
+            HStack {
+                Text(coffee.title)
+                    .font(.headline)
+                
+                Spacer()
+            }
+        }
+        .onAppear {
+            viewModel.fetchLatteList()
+        }
+    }
 }
